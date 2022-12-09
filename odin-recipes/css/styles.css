@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1752&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+    padding: 20px;
+    color: antiquewhite;
+    text-align: center;
+  }
+
+  ul,ol,li{
+    color: antiquewhite;
+    list-style-type: none;
+    font-size:larger;
+    padding: 10px;
+  }
+
+  footer{
+    /* position: fixed;
+    text-align: center; */
+    margin-top: auto;
+    font-size:xx-small
+  }
+/* unvisited link */
+a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
