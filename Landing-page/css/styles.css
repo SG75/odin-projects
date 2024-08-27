@@ -121,12 +121,6 @@ button {
   width: 200px;
   text-align: center;
 }
-.imagediv {
-  /* border: solid 3px var(--background-light-blue); */
-  border-radius: 6px;
-  width: 100%;
-  margin: auto;
-}
 
 .imagediv img {
   width: 100%;
