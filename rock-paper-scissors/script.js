@@ -1,7 +1,7 @@
 //console.log("MahaGanapathi");
 
-let humanScore,
-  computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 // get the computer's choice
 
 function getComputerChoice(max) {
