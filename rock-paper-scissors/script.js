@@ -1,9 +1,8 @@
-//console.log("MahaGanapathi");
+// Initialize humanScore and computerScore to 0
+let humanScore = 0,
+  computerScore = 0;
 
-let humanScore = 0;
-let computerScore = 0;
-// get the computer's choice
-
+// Function to get the computer's choice randomly
 function getComputerChoice(max) {
   let choices = ["rock", "paper", "scissors"];
   max = choices.length;
@@ -11,27 +10,34 @@ function getComputerChoice(max) {
   return choices[choice];
 }
 
+// Function to get the human's choice via a prompt
 function getHumanChoice() {
   let humanChoice = prompt(
     "Enter your choice (rock, paper, or scissors):"
-  ).toLowerCase();
+  ).toLowerCase(); // Convert input to lowercase for consistency
   return humanChoice;
 }
 
-function playRound(humanChoice, computerChoice) {
-  humanChoice = getHumanChoice();
-  computerChoice = getComputerChoice();
+// Function to play a single round of the game
+function playRound() {
+  // Get choices from both human and computer
+  let humanChoice = getHumanChoice();
+  let computerChoice = getComputerChoice();
+
+  // Display the choices made by both players
   console.log("Computer chose: " + computerChoice);
-  console.log("humanChoice: " + humanChoice);
+  console.log("Human chose: " + humanChoice);
+
+  // Determine the result of the round
   if (humanChoice === computerChoice) {
-    console.log("Its a Draw");
+    console.log("It's a Draw");
   } else if (humanChoice === "rock") {
     if (computerChoice === "scissors") {
       console.log("You Win! Rock beats Scissors");
-      humanScore++;
+      humanScore++; // Increase human score
     } else if (computerChoice === "paper") {
       console.log("You Lose! Paper beats Rock");
-      computerScore++;
+      computerScore++; // Increase computer score
     }
   } else if (humanChoice === "paper") {
     if (computerChoice === "rock") {
@@ -52,10 +58,13 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
+// Function to play 5 rounds of the game and display the final scores
 function playGame() {
   for (let i = 0; i < 5; i++) {
-    playRound();
+    playRound(); // Play a single round
   }
+
+  // Display final scores and determine the overall winner
   console.log("Final Scores:");
   console.log("Human: " + humanScore);
   console.log("Computer: " + computerScore);
@@ -69,4 +78,5 @@ function playGame() {
   }
 }
 
+// Start the game by calling playGame
 playGame();
